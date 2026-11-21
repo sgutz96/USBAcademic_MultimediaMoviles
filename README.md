@@ -1,6 +1,6 @@
 # Desarrollo Móvil en Flutter - Curso Multimedia
 
-Este repositorio contiene los materiales y ejercicios del curso de Desarrollo Móvil en Flutter. El curso recorre los conceptos fundamentales del desarrollo de aplicaciones móviles, desde los principios básicos hasta la gestión de estado, el consumo de APIs, la persistencia de datos, el uso de sensores y funciones del dispositivo (giroscopio, vibración, notificaciones) y la entrega de una aplicación compilada.
+Este repositorio contiene los materiales y ejercicios del curso de Desarrollo Móvil en Flutter. El curso recorre los conceptos fundamentales del desarrollo de aplicaciones móviles, desde los principios básicos hasta la gestión de estado, el consumo de APIs, la persistencia de datos y la entrega de una aplicación compilada.
 
 A lo largo de las 16 clases se construye un único proyecto integrador que crece clase a clase, de modo que cada tema se aplica sobre una aplicación real y no sobre ejercicios aislados.
 
@@ -23,21 +23,15 @@ A lo largo de las 16 clases se construye un único proyecto integrador que crece
 
 ## Proyecto integrador
 
-**Catálogo de películas.** Aplicación móvil que consume una API pública de películas, permite explorar el catálogo, ver el detalle de cada título, marcar favoritos, conservar esos favoritos en el dispositivo e interactuar con el teléfono mediante sensores, vibración y notificaciones.
+**Catálogo de películas.** Aplicación móvil que consume una API pública de películas, permite explorar el catálogo, ver el detalle de cada título, marcar favoritos y conservar esos favoritos en el dispositivo.
 
 El proyecto evoluciona durante el curso:
 
 | Corte | Clases | Resultado |
 |-------|--------|-----------|
 | Primer corte | 01 a 06 | Pantallas con tema propio, diseño adaptable, navegación y formulario de búsqueda |
-| Segundo corte | 07 a 11 | Interacción real: filtros, favoritos, estado compartido con Provider, listas, componentes propios y animaciones |
-| Tercer corte | 12 a 16 | Datos desde una API, persistencia local, arquitectura por capas, sensores, vibración, notificaciones y APK firmado |
-
-Funciones del dispositivo que incorpora el proyecto en el tercer corte:
-
-- Agitar o inclinar el teléfono para obtener una película aleatoria (acelerómetro y giroscopio).
-- Vibración al marcar un favorito o al ocurrir un error.
-- Notificación local que recuerda ver una película guardada.
+| Segundo corte | 07 a 11 | Interacción real: filtros, favoritos, estado compartido con Provider, listas y componentes propios |
+| Tercer corte | 12 a 16 | Datos desde una API, persistencia local, arquitectura por capas, animaciones y APK firmado |
 
 ---
 
@@ -49,7 +43,7 @@ Funciones del dispositivo que incorpora el proyecto en el tercer corte:
 | Segundo corte | 07 a 11 | 30% |
 | Tercer corte | 12 a 16 | 40% |
 
-El tercer corte tiene el mayor peso porque concentra la integración de todo lo aprendido: consumo de API, persistencia, arquitectura, sensores, notificaciones y entrega del proyecto final.
+El tercer corte tiene el mayor peso porque concentra la integración de todo lo aprendido: consumo de API, persistencia, arquitectura y entrega del proyecto final.
 
 Cada corte se evalúa con los entregables del proyecto integrador correspondientes a sus clases. El tercer corte incluye además la entrega del proyecto final completo y su sustentación.
 
@@ -68,12 +62,12 @@ Cada corte se evalúa con los entregables del proyecto integrador correspondient
 | 07 | Dart avanzado y async/await | Segundo (30%) |
 | 08 | Estado local | Segundo (30%) |
 | 09 | Provider | Segundo (30%) |
-| 10 | Listas, builders y transiciones Hero | Segundo (30%) |
-| 11 | Componentes reutilizables y animaciones implícitas | Segundo (30%) |
+| 10 | Listas y builders | Segundo (30%) |
+| 11 | Componentes reutilizables | Segundo (30%) |
 | 12 | APIs, FutureBuilder y manejo de errores | Tercero (40%) |
-| 13 | Persistencia de datos y arquitectura por capas | Tercero (40%) |
-| 14 | Sensores y vibración | Tercero (40%) |
-| 15 | Notificaciones, permisos y recursos del dispositivo | Tercero (40%) |
+| 13 | Persistencia de datos | Tercero (40%) |
+| 14 | Arquitectura de la aplicación | Tercero (40%) |
+| 15 | Animaciones | Tercero (40%) |
 | 16 | Compilación y entrega | Tercero (40%) |
 
 ---
@@ -91,7 +85,7 @@ Objetivo del corte: que el estudiante conozca el entorno, escriba Dart con soltu
 
 ### Clase 02. Widgets básicos
 
-- **Qué es:** introducción a la idea central de Flutter: todo es un widget. Se trabajan `Text`, `Container`, `Row`, `Column`, `Stack`, `Image` e `Icon`.
+- **Qué es:** introducción a la idea central de Flutter: todo es un widget. Se trabajan `Text`, `Container`, `Row`, `Column`, `Stack`, `Image` y `Icon`.
 - **Cómo es:** se arma paso a paso la pantalla de inicio del catálogo con datos estáticos, combinando widgets y observando cómo se anidan.
 - **Para qué sirve:** da el vocabulario visual con el que se construye cualquier pantalla y enseña a leer el árbol de widgets.
 - **Entregable:** pantalla de inicio del catálogo con datos fijos.
@@ -128,13 +122,13 @@ Objetivo del corte: que el estudiante conozca el entorno, escriba Dart con soltu
 
 ## Segundo corte: clases 07 a 11 (30%)
 
-Objetivo del corte: dar vida a la interfaz con lógica, estado compartido, listas dinámicas, componentes propios y animaciones.
+Objetivo del corte: dar vida a la interfaz con lógica, estado compartido, listas dinámicas y componentes propios.
 
 ### Clase 07. Dart avanzado y async/await
 
 - **Qué es:** profundización en Dart: funciones de orden superior, manejo de colecciones (`map`, `where`, `reduce`), clases y constructores con nombre, y programación asíncrona con `Future`, `Stream` y `async/await`.
 - **Cómo es:** ejercicios de lógica sobre la lista de películas: filtrar, ordenar y simular una carga de datos con retardo.
-- **Para qué sirve:** la lógica de la app y, más adelante, el consumo de APIs y la lectura de sensores dependen de dominar colecciones, `Future` y `Stream`.
+- **Para qué sirve:** la lógica de la app y, más adelante, el consumo de APIs dependen de dominar colecciones y asincronía.
 - **Entregable:** funciones de filtrado y ordenamiento, y una simulación de carga asíncrona.
 
 ### Clase 08. Estado local
@@ -151,25 +145,25 @@ Objetivo del corte: dar vida a la interfaz con lógica, estado compartido, lista
 - **Para qué sirve:** resuelve el problema de compartir estado entre pantallas sin pasar datos manualmente por todo el árbol de widgets.
 - **Entregable:** favoritos compartidos entre la lista, el detalle y una pantalla de favoritos.
 
-### Clase 10. Listas, builders y transiciones Hero
+### Clase 10. Listas y builders
 
-- **Qué es:** listas dinámicas y eficientes con `ListView`, `GridView`, `ListView.builder` y `GridView.builder`, junto con la transición `Hero` entre la lista y el detalle.
-- **Cómo es:** el catálogo deja de armarse a mano y se genera a partir de una colección de datos, con alternancia entre vista de lista y de cuadrícula. La portada de cada película viaja animada hasta la pantalla de detalle.
-- **Para qué sirve:** casi toda app muestra colecciones de elementos; los builders construyen solo lo visible y mantienen buen rendimiento con muchos datos. `Hero` aporta un primer efecto visual de alto impacto con muy poco código.
-- **Entregable:** catálogo en lista y en cuadrícula generado desde datos, con transición `Hero` al detalle.
+- **Qué es:** listas dinámicas y eficientes con `ListView`, `GridView`, `ListView.builder` y `GridView.builder`.
+- **Cómo es:** el catálogo deja de armarse a mano y se genera a partir de una colección de datos, con alternancia entre vista de lista y de cuadrícula.
+- **Para qué sirve:** casi toda app muestra colecciones de elementos; los builders construyen solo lo visible y mantienen buen rendimiento con muchos datos.
+- **Entregable:** catálogo en lista y en cuadrícula generado desde datos.
 
-### Clase 11. Componentes reutilizables y animaciones implícitas
+### Clase 11. Componentes reutilizables
 
-- **Qué es:** creación de widgets propios y reutilizables (tarjeta de película, botones, encabezados, estados vacíos) y animaciones implícitas con `AnimatedContainer`, `AnimatedOpacity` y `AnimatedSwitcher`.
-- **Cómo es:** se refactoriza el código de las clases anteriores, extrayendo piezas repetidas a widgets con parámetros, y se añaden animaciones sencillas a esos componentes.
-- **Para qué sirve:** mejora la modularidad, reduce código duplicado y facilita mantener y escalar la app. Las animaciones dan acabado visual, un aspecto clave en el perfil de Multimedia. Cierra el segundo corte con una base de código ordenada y atractiva.
-- **Entregable:** biblioteca de widgets propios con animaciones, usada en todo el proyecto.
+- **Qué es:** creación de widgets propios y reutilizables: tarjeta de película, botones, encabezados y estados vacíos.
+- **Cómo es:** se refactoriza el código de las clases anteriores, extrayendo piezas repetidas a widgets con parámetros.
+- **Para qué sirve:** mejora la modularidad, reduce código duplicado y facilita mantener y escalar la app. Cierra el segundo corte con una base de código ordenada.
+- **Entregable:** biblioteca de widgets propios usada en todo el proyecto.
 
 ---
 
 ## Tercer corte: clases 12 a 16 (40%)
 
-Objetivo del corte: conectar la app con datos reales, hacerla persistente, ordenarla con una arquitectura clara, aprovechar el hardware del teléfono y entregarla compilada.
+Objetivo del corte: conectar la app con datos reales, hacerla persistente, ordenarla con una arquitectura clara y entregarla compilada.
 
 ### Clase 12. APIs, FutureBuilder y manejo de errores
 
@@ -178,33 +172,31 @@ Objetivo del corte: conectar la app con datos reales, hacerla persistente, orden
 - **Para qué sirve:** es el paso de una app de práctica a una app con datos reales, y enseña a diseñar la interfaz pensando en que la red puede fallar.
 - **Entregable:** catálogo alimentado desde la API, con estados de carga y error.
 
-### Clase 13. Persistencia de datos y arquitectura por capas
+### Clase 13. Persistencia de datos
 
-- **Qué es:** almacenamiento local con `shared_preferences` para datos simples y `sqflite` para datos estructurados, junto con la separación del código en capas (modelos, servicios, providers y vistas) y la depuración con DevTools.
-- **Cómo es:** los favoritos se guardan en el dispositivo y se recuperan al abrir la app. En paralelo se reorganiza el proyecto, moviendo el acceso a la API y a la base de datos a servicios independientes de la interfaz.
-- **Para qué sirve:** permite que la información del usuario sobreviva al cierre de la app y deja un proyecto ordenado, fácil de depurar y de ampliar. Es la base sobre la que se añaden las funciones del dispositivo en las clases siguientes.
-- **Entregable:** favoritos que se conservan al cerrar la app y proyecto organizado por capas, con una descripción breve de su estructura.
+- **Qué es:** almacenamiento local con `shared_preferences` para datos simples y `sqflite` para datos estructurados.
+- **Cómo es:** los favoritos se guardan en el dispositivo y se recuperan al abrir la app.
+- **Para qué sirve:** permite que la información del usuario sobreviva al cierre de la app y que parte del contenido esté disponible sin conexión.
+- **Entregable:** favoritos que se conservan al cerrar y volver a abrir la app.
 
-### Clase 14. Sensores y vibración
+### Clase 14. Arquitectura de la aplicación
 
-- **Qué es:** lectura de los sensores del teléfono con el paquete `sensors_plus` (giroscopio y acelerómetro, mediante `Stream`) y uso de la vibración con `HapticFeedback` y el paquete `vibration`.
-- **Cómo es:** el estudiante lee los valores del sensor en pantalla, detecta el gesto de agitar o inclinar el teléfono para mostrar una película aleatoria, y añade vibración al marcar un favorito o al ocurrir un error. Se explica cómo filtrar el ruido de las lecturas y cómo cancelar las suscripciones para no gastar batería.
-- **Para qué sirve:** muestra que una app móvil puede reaccionar al movimiento y dar respuesta física al usuario, algo que distingue a las apps móviles de las web. Reutiliza lo aprendido sobre `Stream` en las clases 07 y 12.
-- **Entregable:** función de película aleatoria al agitar o inclinar el teléfono y vibración al marcar favoritos.
-- **Nota:** los sensores y la vibración se prueban en un dispositivo físico; el emulador solo los simula de forma limitada.
+- **Qué es:** separación del código en capas (modelos, servicios, providers y vistas), organización de carpetas y depuración con DevTools.
+- **Cómo es:** se reorganiza el proyecto completo, moviendo el acceso a la API y a la base de datos a servicios independientes de la interfaz.
+- **Para qué sirve:** un proyecto ordenado es más fácil de depurar, probar y ampliar; es la diferencia entre un ejercicio y una aplicación mantenible.
+- **Entregable:** proyecto reorganizado por capas, con un diagrama o descripción breve de su estructura.
 
-### Clase 15. Notificaciones, permisos y recursos del dispositivo
+### Clase 15. Animaciones
 
-- **Qué es:** notificaciones locales con `flutter_local_notifications` (inmediatas y programadas), solicitud de permisos con `permission_handler` y uso de un recurso adicional del dispositivo a elección: cámara o galería con `image_picker`, o geolocalización con `geolocator`.
-- **Cómo es:** se pide al usuario el permiso de notificaciones, se programa un recordatorio para ver una película guardada y se maneja el caso en que el permiso sea denegado. Después cada estudiante integra un recurso adicional al proyecto.
-- **Para qué sirve:** las notificaciones mantienen al usuario conectado con la app, y el manejo correcto de permisos es obligatorio en cualquier app publicada, tanto en Android como en iOS.
-- **Entregable:** recordatorio mediante notificación local, flujo de permisos y un recurso adicional integrado al proyecto.
-- **Nota:** las notificaciones push remotas (Firebase Cloud Messaging) se mencionan como ampliación, pero no forman parte de la evaluación.
+- **Qué es:** animaciones implícitas (`AnimatedContainer`, `AnimatedOpacity` y similares), transiciones con `Hero` y transiciones entre pantallas.
+- **Cómo es:** se añaden animaciones al catálogo, por ejemplo una transición de la portada de la película desde la lista hasta el detalle.
+- **Para qué sirve:** mejora la experiencia de usuario y el acabado visual de la app, un aspecto clave en el perfil de Multimedia.
+- **Entregable:** transiciones y animaciones aplicadas al catálogo.
 
 ### Clase 16. Compilación y entrega
 
-- **Qué es:** generación de APK y AAB firmado, configuración de nombre, icono y permisos de la app (`AndroidManifest.xml` e `Info.plist`), y revisión demostrativa del proceso de publicación en Google Play Store y Apple App Store.
-- **Cómo es:** cada estudiante compila su proyecto final, lo instala en un dispositivo y lo presenta, verificando que sensores, vibración y notificaciones funcionan en la versión compilada. La publicación en las tiendas se explica de forma demostrativa, ya que requiere cuentas de desarrollador de pago y, para iOS, un equipo Mac.
+- **Qué es:** generación de APK y AAB firmado, configuración de nombre e icono de la app, y revisión demostrativa del proceso de publicación en Google Play Store y Apple App Store.
+- **Cómo es:** cada estudiante compila su proyecto final, lo instala en un dispositivo y lo presenta. La publicación en las tiendas se explica de forma demostrativa, ya que requiere cuentas de desarrollador de pago y, para iOS, un equipo Mac.
 - **Para qué sirve:** cierra el ciclo completo de una aplicación, desde la idea hasta un archivo instalable listo para distribuir.
 - **Entregable:** APK firmado del proyecto final y sustentación.
 
@@ -214,8 +206,7 @@ Objetivo del corte: conectar la app con datos reales, hacerla persistente, orden
 
 Estos temas no forman parte de la secuencia principal, pero pueden trabajarse como ampliación o proyecto final:
 
-- Notificaciones push remotas con Firebase Cloud Messaging.
-- Autenticación biométrica (huella o rostro).
+- Acceso a recursos del dispositivo: cámara, galería y geolocalización.
 - Riverpod como alternativa a Provider.
 - Pruebas de widgets y pruebas unitarias.
 
@@ -236,12 +227,12 @@ curso-flutter/
 ├── clase-07-dart-avanzado-async/
 ├── clase-08-estado-local/
 ├── clase-09-provider/
-├── clase-10-listas-builders-hero/
-├── clase-11-componentes-animaciones/
+├── clase-10-listas-builders/
+├── clase-11-componentes-reutilizables/
 ├── clase-12-apis-futurebuilder/
-├── clase-13-persistencia-arquitectura/
-├── clase-14-sensores-vibracion/
-├── clase-15-notificaciones-permisos/
+├── clase-13-persistencia-datos/
+├── clase-14-arquitectura/
+├── clase-15-animaciones/
 └── clase-16-compilacion-entrega/
 ```
 
@@ -254,7 +245,7 @@ Cada carpeta contiene el código de la clase, los ejercicios propuestos y, cuand
 - **Flutter:** versión 3.24 o superior
 - **Dart:** versión 3.x (incluida con Flutter)
 - **IDE recomendado:** Android Studio o VS Code con las extensiones de Flutter y Dart
-- **Dispositivo de pruebas:** emulador de Android para las clases 01 a 13; **dispositivo físico Android con depuración USB activada** para las clases 14 a 16, ya que los sensores, la vibración y las notificaciones no se comportan igual en el emulador
+- **Dispositivo de pruebas:** emulador de Android o dispositivo físico con depuración USB activada
 - **Para compilar en iOS:** equipo Mac con Xcode y cuenta de desarrollador de Apple (opcional; el curso se trabaja con Android)
 
 Para verificar que el entorno está listo, ejecuta:
